@@ -22,13 +22,11 @@ public:
 
     void prepare_next_pos(float);
     void detect_colision(const sf::FloatRect&);
-    void advance_ignore_colistions();
+    void advance_to_next_state();
     void draw(sf::RenderTarget&);
 
-    const PointMass& get_state() const
-    {
-        return current_state;
-    }
+    const PointMass& get_state() const;
+    const PointMass& get_next_state() const;
 
 private:
     common::Log& log;

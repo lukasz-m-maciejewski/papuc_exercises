@@ -34,7 +34,7 @@ void PhysicalEntity::detect_colision(const sf::FloatRect& ent)
     }
 }
 
-void PhysicalEntity::advance_ignore_colistions()
+void PhysicalEntity::advance_to_next_state()
 {
     current_state = next_state;
 }
@@ -46,6 +46,16 @@ void PhysicalEntity::draw(sf::RenderTarget& target)
     box.setFillColor(sf::Color::Blue);
     box.setPosition(current_state.position - 0.5f * size);
     target.draw(box);
+}
+
+const PointMass& PhysicalEntity::get_state() const
+{
+    return current_state;
+}
+
+const PointMass& PhysicalEntity::get_next_state() const
+{
+    return next_state;
 }
 
 PointMass PhysicalEntity::compute_next_state(float dt)

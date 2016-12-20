@@ -28,7 +28,7 @@ void World::advance(const sf::Time& tick, const sf::Vector2f& playerMove)
 
     for (auto& e : entities)
     {
-        e.advance_ignore_colistions();
+        e.advance_to_next();
     }
 }
 

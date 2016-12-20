@@ -21,4 +21,10 @@ inline float length_squared(const sf::Vector2f& v)
 {
     return v.x * v.x + v.y * v.y;
 }
+
+inline sf::Vector2f unit(const sf::Vector2f& v)
+{
+    auto l = length(v);
+    return {v.x / l, v.y / l};
+}
 }
