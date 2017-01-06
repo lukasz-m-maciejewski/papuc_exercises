@@ -1,0 +1,15 @@
+@startuml
+
+participant GameWorld
+participant HumanPlayer
+participant Bomberman
+participant PhysicsEngine
+
+
+GameWorld --> PhysicsEngine : update(deltaTime)
+HumanPlayer --> Bomberman : update_pos
+Bomberman --> PhysicsEngine : validate_updated_pos
+
+
+
+@enduml
