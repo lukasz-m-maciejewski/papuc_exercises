@@ -1,0 +1,14 @@
+@startuml
+
+Bomberman "1" -- "1" Sprite
+Bomberman "1" -- "1" "Bounding Box"
+
+
+
+
+
+
+
+
+
+@enduml

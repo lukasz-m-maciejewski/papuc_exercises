@@ -1,0 +1,34 @@
+@startuml
+
+class Tile {
+}
+class Grass {
+}
+class Speedup {
+}
+class Bomberman {
+}
+
+Tile "1" -- "1" Grass
+Speedup "1" -- "1" Bomberman
+Bonus "*" -- "1" Bomberman
+Bonus "1" -- "1" Grass
+Bomberman "1" -- "1" Grass
+Bomberman "1" -- "*" Bomb
+Bomb "1"-- "1" Explosion
+HumanPlayer "1"-- "1" Bomberman
+Tile "1" -- "1" SolidWall
+Tile "*" -- "1" Map
+Map "1" -- "1" GameWorld
+GameRules "1" -- "1" GameWorld
+Time "1" -- "1" GameWorld
+CpuPlayer "*" -- "1" GameWorld
+CpuPlayer "1" -- "1" Bomberman
+"Ghost and Ghouls" "*" -- "*" Bomberman
+"Ghost and Ghouls" "*" -- "*" Explosion
+"Exit Gate" "1" -- "1" Tile
+"Destructible Wall" "1" -- "1" Grass
+"Destructible Wall" "1" -- "1" "Exit Gate"
+"Destructible Wall" "*" -- "*" Explosion
+
+@enduml
