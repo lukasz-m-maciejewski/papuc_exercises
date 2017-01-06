@@ -11,8 +11,7 @@ Bonus "1" -- "1" Sprite
 Bonus "1" -- "1" "Bounding Box"
 "Indestructible Wall" "1" -- "1" "Bounding Box"
 "Destructible Wall" "1" -- "1" "Bounding Box"
-
-
+RenderingEngine -- Sprite
 
 
 @enduml

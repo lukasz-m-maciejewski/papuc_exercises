@@ -1,0 +1,17 @@
+@startuml
+GameWorld -> Bomb : update(delta_time)
+
+alt internal timer expired
+Bomb --> BombLauncher : notify_exploded
+Bomb --> Explosion : create
+GameWorld <-- Bomb : deregister_entity
+
+Explosion --> GameWorld : register_entity
+Explosion --> RenderingEngine : register_sprite
+
+Bomb --> RenderingEngine : deregister_sprite
+
+else internal timer not expired
+end
+
+@enduml
