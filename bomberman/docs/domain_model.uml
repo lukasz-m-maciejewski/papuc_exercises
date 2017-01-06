@@ -10,13 +10,13 @@ class Bomberman {
 }
 
 Tile "1" -- "1" Grass
-Speedup "1" -- "1" Bomberman
 Bonus "*" -- "1" Bomberman
 Bonus "1" -- "1" Grass
 Bomberman "1" -- "1" Grass
 Bomberman "1" -- "*" Bomb
 Bomb "1"-- "1" Explosion
 HumanPlayer "1"-- "1" Bomberman
+HumanPlayer "1"-- "1" GameWorld
 Tile "1" -- "1" SolidWall
 Tile "*" -- "1" Map
 Map "1" -- "1" GameWorld
