@@ -7,7 +7,8 @@ Bomb --> Explosion : create
 GameWorld <-- Bomb : deregister_entity
 
 Explosion --> GameWorld : register_entity
-Explosion --> RenderingEngine : register_sprite
+Explosion --> Map : get_available_area_for_exploding
+Explosion --> RenderingEngine : register_sprites
 
 Bomb --> RenderingEngine : deregister_sprite
 
