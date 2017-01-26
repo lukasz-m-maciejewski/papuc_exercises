@@ -7,12 +7,14 @@ participant HumanPlayer
 participant Bomberman
 
 participant RenderingEngine
+participant PhysicsEngine
 
 main --> RenderingEngine : create
 main --> GameWorld : create
 GameWorld --> Map : create(seed?)
 Map --> Map : create_tileset
 Map --> RenderingEngine : register_all_visible
+Map --> PhysicsEngine : register_all_stuff
 
 GameWorld --> HumanPlayer : create
 HumanPlayer --> Bomberman : create
