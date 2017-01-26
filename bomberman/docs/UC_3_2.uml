@@ -11,5 +11,4 @@ HumanPlayer --> Bomberman : update_pos
 Bomberman --> PhysicsEngine : validate_updated_pos
 
 
-
 @enduml
