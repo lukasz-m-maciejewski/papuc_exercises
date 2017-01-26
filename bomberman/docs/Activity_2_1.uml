@@ -4,7 +4,7 @@ title Bomb laucher
 
 (*) --> "Try spawn spawn bomb"
 
-if "umber_of_placed_bombs >= bomberman_bombs"
+if "number_of_placed_bombs >= bomberman_bombs"
   --> [yes] (*)
 else
   if "Does map allow to place bomb"
